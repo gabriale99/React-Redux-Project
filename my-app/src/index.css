@@ -136,3 +136,35 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
+body .header {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+  width: 100%;
+}
+.toolBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2fa1b5;
+}
+.toolBar .headerButtonContainer,
+.toolBar .logo {
+  margin: 0 10px 0 0;
+}
+.toolBar .headerButtonContainer .headerButton,
+.toolBar .logo .headerButton {
+  color: #fff;
+}
+.headerTitle {
+  padding: 0 10px;
+  border-left: 2px solid #fff;
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+table {
+  border: 1px solid #f00;
+}

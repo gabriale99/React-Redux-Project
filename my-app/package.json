@@ -4,12 +4,13 @@
   "private": true,
   "homepage": "https://gabriale99.github.io/React-Redux-Project/",
   "dependencies": {
+    "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
     "gh-pages": "^2.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "@material-ui/core": "^4.3.1",
     "react-redux": "^7.1.0",
+    "react-scripts": "3.0.1",
     "react-vis": "^1.11.7",
     "redux": "^4.0.4",
     "redux-devtools": "^3.5.0",
@@ -38,6 +39,9 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-  }
+  "devDependencies": {},
+  "main": "index.js",
+  "license": "MIT",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "author": ""
 }
