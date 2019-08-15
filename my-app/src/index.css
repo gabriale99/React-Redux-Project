@@ -142,18 +142,14 @@ body .header {
   right: 0;
   position: fixed;
   width: 100%;
+  z-index: 1100;
 }
 .toolBar {
   display: flex;
   justify-content: space-between;
   background-color: #2fa1b5;
 }
-.toolBar .headerButtonContainer,
-.toolBar .logo {
-  margin: 0 10px 0 0;
-}
-.toolBar .headerButtonContainer .headerButton,
-.toolBar .logo .headerButton {
+.toolBar .headerButtonContainer .headerButton {
   color: #fff;
 }
 .headerTitle {
@@ -164,6 +160,14 @@ body .header {
 .right {
   display: flex;
   align-items: center;
+}
+.navBarContainer {
+  z-index: 600;
+  position: fixed;
+  top: 0;
+}
+.navBarContainer .navBar {
+  margin-top: 85px;
 }
 table {
   border: 1px solid #f00;

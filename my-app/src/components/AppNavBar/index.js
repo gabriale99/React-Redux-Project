@@ -1,24 +1,22 @@
 import React from 'react';
-import { Drawer, /*Button,*/ List, Divider, ListItem, ListItemIcon, ListItemText, Icons } from '../';
+import { Drawer, List, ListItem, ListItemIcon, ListItemText, Icons } from '../';
 
-const MailIcon = Icons.Mail;
-const InboxIcon = Icons.MoveToInbox;
-
-function AppNavBar() {
-
+function AppNavBar(props) {
   function createList() {
     return (
       <div>
-        <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+        <List className="navBar">
+          {props.content.map((item) => {
+            let CurIcon = Icons[item.icon]
+            return (
+              <ListItem button key={item.label}>
+                <ListItemIcon children={Icons[item.icon]}>
+                  <CurIcon />
+                </ListItemIcon>
+                <ListItemText primary={item.label} />
+              </ListItem>
+            )
+          })}
         </List>
       </div>
     );
@@ -26,13 +24,13 @@ function AppNavBar() {
   }
 
   return (
-    <div>
+    <div className="navBarContainer">
       <Drawer
         variant="persistent"
         anchor="left"
-        open={true}
+        open={props.open}
       >
-
+        {createList()}
       </Drawer>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, IconButton, SvgIcon, Icons, DropDownMenu } from '../';
+import { connect } from 'react-redux'
+import { AppBar, Toolbar, Typography, IconButton, SvgIcon, Icons, DropDownMenu, AppNavBar } from '../';
+import HeaderAction from '../../ActionTypes/HeaderAction';
 import logoConfig from './data'
 
 const MenuButton = Icons.Menu;
@@ -8,55 +10,79 @@ const PersonButton = Icons.Person;
 class AppHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      anchorEl: null
-    }
 
-    this.setAnchorEl = this.setAnchorEl.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-
+    this.handleNavBarClick = this.handleNavBarClick.bind(this);
+    this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handleMenuClose = this.handleMenuClose.bind(this);
   }
 
-  setAnchorEl(target) {
-    this.setState({anchorEl: target});
+  handleNavBarClick() {
+    this.props.controlNavBar();
+    // console.log(this.props)
   }
 
-  handleClick(event) {
-    this.setAnchorEl(event.currentTarget);
+  handleMenuClick(event) {
+    this.props.showMenu(event);
   }
 
-  handleClose() {
-    this.setAnchorEl(null);
+  handleMenuClose() {
+    this.props.hideMenu();
   }
 
   render() {
-    const {anchorEl} = this.state;
-
+    const { anchorEl, menuContent, open, navBarContent } = this.props;
+    // console.log(this.props)
     return (
-      <AppBar className="header">
-        <Toolbar className="toolBar">
-          <div className='left'>
-            <IconButton className="headerButtonContainer" aria-label="menu">
-              <MenuButton className="headerButton" />
-            </IconButton>
-            <SvgIcon className="logo">
-              <path d={logoConfig}></path>
-            </SvgIcon>
-            <Typography variant="h6" className="headerTitle">
-              Design
+      <React.Fragment>
+        <AppBar className="header">
+          <Toolbar className="toolBar">
+            <div className='left'>
+              <IconButton className="headerButtonContainer" aria-label="navBar" onClick={this.handleNavBarClick}>
+                <MenuButton className="headerButton" />
+              </IconButton>
+              <IconButton className="headerButtonContainer">
+                <SvgIcon className="headerButton">
+                  <path d={logoConfig}></path>
+                </SvgIcon>
+              </IconButton>
+              <Typography variant="h6" className="headerTitle">
+                Design
             </Typography>
-          </div>
-          <div className="right">
-            <IconButton className="headerButtonContainer" onClick={this.handleClick}>
-              <PersonButton className="headerButton" />
-            </IconButton>
-            <DropDownMenu anchorEl={anchorEl} handleClick={this.handleClick} handleClose={this.handleClose}/>
-          </div>
-        </Toolbar>
-      </AppBar >
+            </div>
+            <div className="right">
+              <IconButton className="headerButtonContainer" aria-label="menu" onClick={this.handleMenuClick}>
+                <PersonButton className="headerButton" />
+              </IconButton>
+              <DropDownMenu
+                anchorEl={anchorEl}
+                handleClose={this.handleMenuClose}
+                content={menuContent}
+              />
+            </div>
+          </Toolbar>
+        </AppBar >
+        <AppNavBar open={open} content={navBarContent}/>
+      </React.Fragment>
     );
   }
 }
 
-export default AppHeader;
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    anchorEl: state.menuReducer.anchorEl,
+    menuContent: state.menuReducer.menuContent,
+    open: state.navBarReducer.open,
+    navBarContent: state.navBarReducer.navBar
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    showMenu: (event) => { dispatch(HeaderAction.showMenu(event)) },
+    hideMenu: () => { dispatch(HeaderAction.hideMenu()) },
+    controlNavBar: () => { dispatch(HeaderAction.controlNavBar()) },
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppHeader);
