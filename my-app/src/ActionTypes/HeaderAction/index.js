@@ -15,7 +15,7 @@ const hideMenu = () => {
 
 const controlNavBar = () => {
   return{
-    type: Action.CONTROL_NAV_BAR,
+    type: Action.SHOW_HIDE_NAV_BAR,
   };
 }
 

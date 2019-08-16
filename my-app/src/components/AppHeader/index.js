@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { AppBar, Toolbar, Typography, IconButton, SvgIcon, Icons, DropDownMenu, AppNavBar } from '../';
+import { AppBar, Toolbar, Typography, IconButton, SvgIcon, Icons, DropDownMenu, /*AppNavBar*/ } from '../';
 import HeaderAction from '../../ActionTypes/HeaderAction';
 import logoConfig from './data'
 
@@ -18,7 +18,6 @@ class AppHeader extends React.Component {
 
   handleNavBarClick() {
     this.props.controlNavBar();
-    // console.log(this.props)
   }
 
   handleMenuClick(event) {
@@ -30,8 +29,7 @@ class AppHeader extends React.Component {
   }
 
   render() {
-    const { anchorEl, menuContent, open, navBarContent } = this.props;
-    // console.log(this.props)
+    const { anchorEl, menuContent } = this.props;
     return (
       <React.Fragment>
         <AppBar className="header">
@@ -61,19 +59,16 @@ class AppHeader extends React.Component {
             </div>
           </Toolbar>
         </AppBar >
-        <AppNavBar open={open} content={navBarContent}/>
+        {/* <AppNavBar open={open} content={navBarContent}/> */}
       </React.Fragment>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     anchorEl: state.menuReducer.anchorEl,
     menuContent: state.menuReducer.menuContent,
-    open: state.navBarReducer.open,
-    navBarContent: state.navBarReducer.navBar
   }
 };
 
@@ -81,7 +76,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     showMenu: (event) => { dispatch(HeaderAction.showMenu(event)) },
     hideMenu: () => { dispatch(HeaderAction.hideMenu()) },
-    controlNavBar: () => { dispatch(HeaderAction.controlNavBar()) },
   }
 }
 

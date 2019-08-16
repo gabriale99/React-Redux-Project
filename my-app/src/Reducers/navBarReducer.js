@@ -2,16 +2,25 @@ import Action from "../ActionTypes/ActionIDs"
 import Data from "./data"
 
 const initState = {
-  open: true,
+  openNavBar: true,
   navBar: Data.navBarContent,
+  navBarSub: {}
 }
 
 function navBarReducer(state = initState, action) {
   switch (action.type) {
-    case Action.CONTROL_NAV_BAR:
+    case Action.SHOW_HIDE_NAV_BAR:
       return {
         ...state,
-        open: !state.open,
+        openNavBar: !state.openNavBar,
+      }
+    case Action.SHOW_HIDE_NAV_BAR_SUB_ITEM:
+      return {
+        ...state,
+        navBarSub: {
+          ...state.navBarSub,
+          [action.label]: !state.navBarSub[action.label],
+        }
       }
     default:
       return state;
