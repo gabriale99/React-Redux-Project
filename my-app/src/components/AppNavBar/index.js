@@ -1,6 +1,7 @@
 import React from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, Collapse, Icons } from '../';
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import NavBarAction from "../../ActionTypes/NavBarAction"
 
 function AppNavBar(props) {
@@ -27,6 +28,7 @@ function AppNavBar(props) {
   function renderListItem(item) {
     let Icon = Icons[item.icon];
     let label = item.label;
+    let url = item.url ? item.url : ""
     let subList, expand;
     if (!!item.subNavItems) {
       subList = renderList(item.subNavItems);
@@ -36,23 +38,42 @@ function AppNavBar(props) {
             <ExpandLess /> : <ExpandMore />}
         </ListItemIcon>)
     }
+
+    let listItem = (
+      <ListItem button key={label}
+        onClick={!!subList ? () => handleClick(label) : null}
+        className="navBarItem">
+        <ListItemIcon>
+          <Icon />
+        </ListItemIcon>
+        <ListItemText primary={label} className="navBarLabel" />
+        {expand}
+      </ListItem>
+    )
+
     return (
       <React.Fragment key={label}>
-        <ListItem button key={label}
-          onClick={!!subList ? () => handleClick(label) : null}
-          className="navBarItem">
-          <ListItemIcon>
-            <Icon />
-          </ListItemIcon>
-          <ListItemText primary={label} className="navBarLabel" />
-          {expand}
-        </ListItem>
-        {!!subList ?
+        {url ?
+          (
+            <NavLink to={url}>
+              {listItem}
+            </NavLink>
+          ) :
+          (
+            <React.Fragment>
+              {listItem}
+              <Collapse in={props.navBarSub[label]} timeout="auto" unmountOnExit>
+                {subList}
+              </Collapse>
+            </React.Fragment >
+          )
+        }
+        {/* {!!subList ?
           <Collapse in={props.navBarSub[label]} timeout="auto" unmountOnExit>
             {subList}
           </Collapse> :
           null
-        }
+        } */}
       </React.Fragment >
     );
   }

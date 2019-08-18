@@ -9,18 +9,17 @@ const navBarContent = [
   },
   {
     label: 'Colors',
-    url: BASE_URL + 'colors',
+    url: BASE_URL + 'Colors',
     icon: 'Palette'
 
   },
   {
     label: 'Components',
-    url: BASE_URL + 'components',
     icon: 'Widgets',
     subNavItems: [
       {
         label: 'Avatar',
-        url: BASE_URL + 'components/avatar',
+        url: BASE_URL + 'Components/Avatar',
         icon: 'NavigateNext'
 
       },
@@ -103,72 +102,66 @@ const navBarContent = [
   },
   {
     label: 'Charts',
-    url: BASE_URL + 'charts',
     icon: 'Timeline',
     subNavItems: [
       {
         label: 'Area',
-        url: BASE_URL + 'charts/area',
+        url: BASE_URL + 'Charts/Area',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Circular Grid Line',
-        url: BASE_URL + 'charts/circulargridline',
+        url: BASE_URL + 'Charts/CircularGridLine',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Heatmap',
-        url: BASE_URL + 'charts/heatmap',
+        url: BASE_URL + 'Charts/HeatMap',
         icon: 'NavigateNext'
 
       },
       {
-        label: 'Horizontal Bar',
-        url: BASE_URL + 'charts/horizontalbar',
+        label: 'Bar',
+        url: BASE_URL + 'Charts/Bar',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Line',
-        url: BASE_URL + 'charts/line',
+        url: BASE_URL + 'Charts/Line',
         icon: 'NavigateNext'
 
       },
       {
         label: 'LineMark',
-        url: BASE_URL + 'charts/linemark',
+        url: BASE_URL + 'Charts/Linemark',
         icon: 'NavigateNext'
       },
       {
         label: 'Pie',
-        url: BASE_URL + 'charts/pie',
+        url: BASE_URL + 'Charts/Pie',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Scatter Plot',
-        url: BASE_URL + 'charts/scatterplot',
+        url: BASE_URL + 'Charts/ScatterPlot',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Stacked Bar',
-        url: BASE_URL + 'charts/stackbar',
+        url: BASE_URL + 'Charts/StackedBar',
         icon: 'NavigateNext'
 
-      },
-      {
-        label: 'Vertical Bar',
-        url: BASE_URL + 'charts/verticalbar',
-        icon: 'NavigateNext'
       },
     ]
   },
   {
     label: 'Iconography',
-    url: BASE_URL + 'icons',
+    url: BASE_URL + 'Iconography',
     icon: 'BlurOn'
 
   }
