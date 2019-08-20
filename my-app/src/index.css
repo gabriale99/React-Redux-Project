@@ -20,6 +20,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  margin: 0px;
   line-height: 1;
   background-color: #fbfbfb;
 }
@@ -142,7 +143,7 @@ body .header {
   right: 0;
   position: fixed;
   width: 100%;
-  z-index: 1100;
+  z-index: 1500;
 }
 .toolBar {
   display: flex;
@@ -182,22 +183,41 @@ body .header {
 .navBarContainer .navBar .navBarSubList {
   padding: 0;
 }
+.areaSeries {
+  margin: 30px;
+}
+.lineSeries {
+  margin: 30px;
+}
+.sampleCode {
+  background-color: #fff;
+  width: 100%;
+}
+.colorsDisplay iframe {
+  width: 100%;
+  height: 100vh;
+}
 .sidebar {
   width: 100vw;
   transition: margin-left 225ms;
   justify-content: center;
 }
 .open {
-  margin-left: 260px;
+  margin-left: 250px;
 }
 .close {
-  margin-left: 20px;
+  margin-left: 0;
 }
 .mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #f00;
-  height: 90vh;
+  margin: 5px;
+}
+.mainContainer .tabContainer {
+  background-color: #6fafb5;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
 }

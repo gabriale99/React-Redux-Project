@@ -3,7 +3,9 @@ import { Typography } from "../../components/"
 
 function Home(props) {
     return (
-        <Typography variant="h1">Hello World</Typography>
+        <div className="mainContainer">
+            <Typography variant="h1">Hello World</Typography>
+        </div>
     );
 }
 

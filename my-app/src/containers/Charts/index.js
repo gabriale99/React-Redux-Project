@@ -8,4 +8,5 @@ import Pie from './Pie';
 import ScatterPlot from './ScatterPlot';
 import StackedBar from './StackedBar';
 
-export default { Area, Bar, CircularGridLine, HeatMap, Line, LineMark, Pie, ScatterPlot, StackedBar };
+export default { Area, Bar, CircularGridLine, HeatMap, Line, 
+                LineMark, Pie, ScatterPlot, StackedBar };

@@ -3,6 +3,7 @@ import { Drawer, List, ListItem, ListItemIcon, ListItemText, Collapse, Icons } f
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import NavBarAction from "../../ActionTypes/NavBarAction"
+import ContentAction from "../../ActionTypes/ContentAction"
 
 function AppNavBar(props) {
 
@@ -23,6 +24,10 @@ function AppNavBar(props) {
 
   function handleClick(label) {
     props.showHideNavBarSubItem(label);
+  }
+
+  function resetTabView() {
+    props.resetTabs();
   }
 
   function renderListItem(item) {
@@ -55,7 +60,7 @@ function AppNavBar(props) {
       <React.Fragment key={label}>
         {url ?
           (
-            <NavLink to={url}>
+            <NavLink to={url} onClick={resetTabView}>
               {listItem}
             </NavLink>
           ) :
@@ -68,12 +73,6 @@ function AppNavBar(props) {
             </React.Fragment >
           )
         }
-        {/* {!!subList ?
-          <Collapse in={props.navBarSub[label]} timeout="auto" unmountOnExit>
-            {subList}
-          </Collapse> :
-          null
-        } */}
       </React.Fragment >
     );
   }
@@ -100,6 +99,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     showHideNavBarSubItem: (label) => { dispatch(NavBarAction.showHideNavBarSubItem(label)) },
+    resetTabs: () => { dispatch(ContentAction.resetTabs()) },
   }
 }
 

@@ -25,76 +25,76 @@ const navBarContent = [
       },
       {
         label: 'Button',
-        url: BASE_URL + 'components/button',
+        url: BASE_URL + 'Components/Button',
         icon: 'NavigateNext'
 
       },
       {
-        label: 'Chips',
-        url: BASE_URL + 'components/chips',
+        label: 'Chip',
+        url: BASE_URL + 'Components/Chip',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Dialog',
-        url: BASE_URL + 'components/dialog',
+        url: BASE_URL + 'Components/Dialog',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Expend Panel',
-        url: BASE_URL + 'components/panel',
+        url: BASE_URL + 'Components/ExpandPanel',
         icon: 'NavigateNext'
       },
       {
         label: 'Info Card',
-        url: BASE_URL + 'components/infocard',
+        url: BASE_URL + 'Components/InfoCard',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Markdown',
-        url: BASE_URL + 'components/markdown',
+        url: BASE_URL + 'Components/Markdown',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Nested List',
-        url: BASE_URL + 'components/nestedlist',
+        url: BASE_URL + 'Components/NestedList',
         icon: 'NavigateNext'
       },
       {
         label: 'Notification',
-        url: BASE_URL + 'components/notification',
+        url: BASE_URL + 'Components/Notification',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Progress',
-        url: BASE_URL + 'components/progress',
+        url: BASE_URL + 'Components/Progress',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Search Field',
-        url: BASE_URL + 'components/searchfield',
+        url: BASE_URL + 'Components/SearchField',
         icon: 'NavigateNext'
       },
       {
         label: 'Spinner',
-        url: BASE_URL + 'components/spinner',
+        url: BASE_URL + 'Components/Spinner',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Table',
-        url: BASE_URL + 'components/table',
+        url: BASE_URL + 'Components/Table',
         icon: 'NavigateNext'
 
       },
       {
         label: 'Tabs',
-        url: BASE_URL + 'components/tabs',
+        url: BASE_URL + 'Components/Tabs',
         icon: 'NavigateNext'
 
       },

@@ -1,13 +1,53 @@
 import React from 'react';
-import { Typography } from "../../components/"
+import { AppBar, Paper, Tab, Tabs } from "../../components/"
+import { connect } from 'react-redux'
+import ContentAction from '../../ActionTypes/ContentAction';
 
-function MainContent(props) {
-  return (
-    <div className="mainContainer">
-      <Typography variant="h1">Main Content</Typography>
-      <Typography variant="h3">{props.content}</Typography>
-    </div>
-  );
+class MainContent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event, value) {
+    this.props.switchTabs(value);
+  }
+
+  render() {
+    const { label, content, tab, code } = this.props;
+    return (
+      <Paper className="mainContainer">
+        <AppBar position="static">
+          <Tabs
+            value={tab}
+            className="tabContainer"
+            onChange={this.handleChange}
+            aria-label="tab"
+            variant="fullWidth"
+            indicatorColor="primary"
+          >
+            <Tab value="Demo" label={label} />
+            <Tab value="Sample" label="Sample Usage" />
+          </Tabs>
+        </AppBar>
+        {tab === "Demo" && content}
+        {tab === "Sample" && code}
+      </Paper>
+    );
+  }
 }
 
-export default MainContent;
+const mapStateToProps = (state) => {
+  return {
+    tab: state.contentReducer.tab,
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    switchTabs: (value) => { dispatch(ContentAction.switchTabs(value)) },
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainContent);

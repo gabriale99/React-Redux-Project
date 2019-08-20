@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { AppBar, Toolbar, Typography, IconButton, SvgIcon, Icons, DropDownMenu, /*AppNavBar*/ } from '../';
+import { AppBar, Toolbar, Typography, IconButton, SvgIcon, Icons, DropDownMenu, } from '../';
 import HeaderAction from '../../ActionTypes/HeaderAction';
 import logoConfig from './data'
 
@@ -59,7 +59,6 @@ class AppHeader extends React.Component {
             </div>
           </Toolbar>
         </AppBar >
-        {/* <AppNavBar open={open} content={navBarContent}/> */}
       </React.Fragment>
     );
   }
