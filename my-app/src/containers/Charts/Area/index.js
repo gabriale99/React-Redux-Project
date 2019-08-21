@@ -1,12 +1,13 @@
 import React from 'react';
 import MainContent from "../../MainContent"
-import { Charts, ReactMarkdown } from '../../../components';
+import { XYPlot, AreaSeries, XAxis, YAxis, VerticalGridLines, HorizontalGridLines } from 'react-vis';
+import { /*Charts,*/ ReactMarkdown } from '../../../components';
 import data from './data'
 import CodeBlock from '../../CodeBlock';
 
 function Area() {
-  const { XYPlot, AreaSeries, XAxis, YAxis,
-    VerticalGridLines, HorizontalGridLines } = Charts;
+  // const { XYPlot, AreaSeries, XAxis, YAxis,
+  //   VerticalGridLines, HorizontalGridLines } = Charts;
 
   const codeSample = `
     import React from 'react';
