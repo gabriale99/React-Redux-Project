@@ -19,27 +19,23 @@ const navBarContent = [
     subNavItems: [
       {
         label: 'Avatar',
-        url: BASE_URL + 'Components/Avatar',
+        url: BASE_URL + 'Components/AvatarDemo',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Button',
-        url: BASE_URL + 'Components/Button',
+        url: BASE_URL + 'Components/ButtonDemo',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Chip',
-        url: BASE_URL + 'Components/Chip',
+        url: BASE_URL + 'Components/ChipDemo',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Dialog',
         url: BASE_URL + 'Components/Dialog',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Expend Panel',
@@ -50,13 +46,11 @@ const navBarContent = [
         label: 'Info Card',
         url: BASE_URL + 'Components/InfoCard',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Markdown',
         url: BASE_URL + 'Components/Markdown',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Nested List',
@@ -73,7 +67,6 @@ const navBarContent = [
         label: 'Progress',
         url: BASE_URL + 'Components/Progress',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Search Field',
@@ -84,19 +77,16 @@ const navBarContent = [
         label: 'Spinner',
         url: BASE_URL + 'Components/Spinner',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Table',
         url: BASE_URL + 'Components/Table',
         icon: 'NavigateNext'
-
       },
       {
         label: 'Tabs',
         url: BASE_URL + 'Components/Tabs',
         icon: 'NavigateNext'
-
       },
     ]
   },

@@ -5,7 +5,8 @@ import { Charts, ReactMarkdown } from '../../../components';
 import CodeBlock from '../../CodeBlock';
 
 function Line() {
-  const { XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, LineSeries, ChartLabel, LineSeriesCanvas } = Charts;
+const { XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, 
+  LineSeries, /*ChartLabel, LineSeriesCanvas*/ } = Charts;
 
   const codeSample = `
     import React from 'react';

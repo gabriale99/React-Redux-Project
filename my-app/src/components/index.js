@@ -1,5 +1,5 @@
 import * as Icons from '@material-ui/icons/';
-import * as Charts from 'react-vis';
+import * as Charts from "react-vis";
 import ReactMarkdown from 'react-markdown'
 
 // export all components, Icons, Charts
