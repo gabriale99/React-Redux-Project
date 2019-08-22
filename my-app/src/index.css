@@ -183,11 +183,13 @@ body .header {
 .navBarContainer .navBar .navBarSubList {
   padding: 0;
 }
-.areaSeries {
-  margin: 30px;
+.bar-container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
 }
-.lineSeries {
-  margin: 30px;
+.bar-container .barChange {
+  margin: 5px;
 }
 .react-vis-magic-css-import-rule {
   display: inherit;
@@ -419,6 +421,9 @@ body .header {
 .rv-radial-chart .rv-xy-plot__series--label {
   pointer-events: none;
 }
+.charts-container {
+  margin: 30px;
+}
 .sampleCode {
   background-color: #fff;
   width: 100%;
@@ -495,6 +500,7 @@ body .header {
 }
 .sidebar {
   width: 100vw;
+  padding: 10px;
   transition: margin-left 225ms;
   justify-content: center;
 }

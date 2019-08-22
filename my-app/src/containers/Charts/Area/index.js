@@ -38,7 +38,7 @@ function Area() {
 
   function renderAreaSeries() {
     return (
-      <XYPlot width={500} height={500} className="areaSeries">
+      <XYPlot width={500} height={500} className="area charts-container">
         <VerticalGridLines />
         <HorizontalGridLines />
         <XAxis />

@@ -126,7 +126,7 @@ const navBarContent = [
       },
       {
         label: 'LineMark',
-        url: BASE_URL + 'Charts/Linemark',
+        url: BASE_URL + 'Charts/LineMark',
         icon: 'NavigateNext'
       },
       {
