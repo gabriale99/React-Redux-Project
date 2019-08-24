@@ -17,7 +17,7 @@ class MainContent extends React.Component {
   render() {
     const { label, content, code, tab } = this.props;
     return (
-      <Paper className="mainContainer">
+      <Paper className="main-container">
         <AppBar position="static">
           <Tabs
             value={tab}

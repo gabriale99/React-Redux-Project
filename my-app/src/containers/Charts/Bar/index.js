@@ -4,7 +4,7 @@ import ChartsAction from "../../../ActionTypes/ChartsAction";
 import MainContent from "../../MainContent";
 import { Button, Charts, ReactMarkdown } from "../../../components";
 import CodeBlock from "../../CodeBlock";
-import data from "./data"
+import data from "./data";
 
 function Bar(props) {
   const {
@@ -14,7 +14,7 @@ function Bar(props) {
     VerticalGridLines,
     HorizontalGridLines,
     VerticalBarSeries,
-    HorizontalBarSeries,
+    HorizontalBarSeries
   } = Charts;
 
   const codeSample = `
@@ -94,9 +94,17 @@ function Bar(props) {
 
   function renderBarChart() {
     return (
-      <div className="bar-container">
-        <Button variant="outlined" className="barChange" onClick={handleClick}>Change bar form</Button>
-        {props.isVer ? renderVerticalBar() : renderHorizontalBar()}
+      <div className="charts-container">
+        <div className="bar-container">
+          <Button
+            variant="outlined"
+            className="bar-change"
+            onClick={handleClick}
+          >
+            Change bar form
+          </Button>
+          {props.isVer ? renderVerticalBar() : renderHorizontalBar()}
+        </div>
       </div>
     );
   }

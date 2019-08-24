@@ -34,7 +34,7 @@ const navBarContent = [
       },
       {
         label: 'Dialog',
-        url: BASE_URL + 'Components/Dialog',
+        url: BASE_URL + 'Components/DialogDemo',
         icon: 'NavigateNext'
       },
       {

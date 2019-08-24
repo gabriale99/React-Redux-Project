@@ -38,7 +38,7 @@ function AvatarDemo() {
 
   const renderAvatars = function() {
     return (
-      <div className="avatarContainer">
+      <div className="component-container">
         {renderImageAvatars()}
         {renderLetterAvatars()}
         {renderIconAvatars()}
@@ -48,9 +48,9 @@ function AvatarDemo() {
 
   const renderImageAvatars = function() {
     return (
-      <div className="avatarContent">
+      <div className="avatar-content">
         <Typography variant="h5">Image</Typography>
-        <div className="avatarGrid">
+        <div className="avatar-grid">
           <Avatar
             src="https://cdn.roundicons.com/wp-content/uploads/2017/08/snorlax-Filled-Outline-Icon.png"
           />
@@ -66,9 +66,9 @@ function AvatarDemo() {
 
   const renderLetterAvatars = function() {
     return (
-      <div className="avatarContent">
+      <div className="avatar-content">
         <Typography variant="h5">Letter</Typography>
-        <div className="avatarGrid">
+        <div className="avatar-grid">
           <Avatar>B</Avatar>
           <Avatar className="letterS">S</Avatar>
           <Avatar className="letterLA">LA</Avatar>
@@ -79,9 +79,9 @@ function AvatarDemo() {
 
   const renderIconAvatars = function() {
     return (
-      <div className="avatarContent">
+      <div className="avatar-content">
         <Typography variant="h5">Svg Icon</Typography>
-        <div className="avatarGrid">
+        <div className="avatar-grid">
           <Avatar>
             <FolderIcon />
           </Avatar>

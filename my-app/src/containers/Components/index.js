@@ -1,7 +1,7 @@
 import AvatarDemo from './Avatar';
 import ButtonDemo from './Button';
 import ChipDemo from './Chip';
-import Dialog from './Dialog';
+import DialogDemo from './Dialog';
 import ExpandPanel from './ExpandPanel';
 import InfoCard from './InfoCard';
 import Markdown from './Markdown';
@@ -13,6 +13,6 @@ import Spinner from './Spinner'
 import Table from './Table'
 import Tabs from './Tabs'
 
-export default { AvatarDemo, ButtonDemo, ChipDemo, Dialog, ExpandPanel, 
+export default { AvatarDemo, ButtonDemo, ChipDemo, DialogDemo, ExpandPanel, 
                 InfoCard, Markdown, NestedList, Notification,
                 Progress, SearchField, Spinner, Table, Tabs };

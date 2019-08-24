@@ -26,13 +26,13 @@ function ButtonDemo() {
     <ReactMarkdown
       source={codeSample}
       renderers={{ code: CodeBlock }}
-      className="sampleCode"
+      className="sample-code"
     />
   );
 
   const renderButtons = function() {
     return (
-      <div className="buttonContainer">
+      <div className="component-container">
         {renderDefaultButtons()}
         {renderContainedButtons()}
         {rendertOutlinedButtons()}
@@ -43,9 +43,9 @@ function ButtonDemo() {
 
   const renderDefaultButtons = function() {
     return (
-      <div className="buttonContent">
+      <div className="button-content">
         <Typography variant="h5">Default</Typography>
-        <div className="buttonGrid">
+        <div className="button-grid">
           <Button> Default </Button>
           <Button color="primary">Primary</Button>
           <Button color="secondary">Secondary</Button>
@@ -66,9 +66,9 @@ function ButtonDemo() {
 
   const renderContainedButtons = function() {
     return (
-      <div className="buttonContent">
+      <div className="button-content">
         <Typography variant="h5">Contained</Typography>
-        <div className="buttonGrid">
+        <div className="button-grid">
           <Button variant="contained"> Default </Button>
           <Button variant="contained" color="primary">
             Primary
@@ -94,9 +94,9 @@ function ButtonDemo() {
 
   const rendertOutlinedButtons = function() {
     return (
-      <div className="buttonContent">
+      <div className="button-content">
         <Typography variant="h5">Outlined</Typography>
-        <div className="buttonGrid">
+        <div className="button-grid">
           <Button variant="outlined"> Default</Button>
           <Button variant="outlined" color="primary">
             Primary
@@ -122,9 +122,9 @@ function ButtonDemo() {
 
   const renderDifferetButtonSize = function() {
     return (
-      <div className="buttonContent">
+      <div className="button-content">
         <Typography variant="h5">Sizes</Typography>
-        <div className="buttonGrid">
+        <div className="button-grid">
           <Button variant="contained" size="small">
             Small
           </Button>
