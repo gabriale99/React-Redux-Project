@@ -69,16 +69,6 @@ const navBarContent = [
         icon: 'NavigateNext'
       },
       {
-        label: 'Search Field',
-        url: BASE_URL + 'Components/SearchField',
-        icon: 'NavigateNext'
-      },
-      {
-        label: 'Spinner',
-        url: BASE_URL + 'Components/Spinner',
-        icon: 'NavigateNext'
-      },
-      {
         label: 'Table',
         url: BASE_URL + 'Components/Table',
         icon: 'NavigateNext'

@@ -73,7 +73,7 @@ function Notification(props) {
         <Snackbar
           className="notification"
           anchorOrigin={{
-            vertical: "top",
+            vertical: "bottom",
             horizontal: "center"
           }}
           open={openNotification}

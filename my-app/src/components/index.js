@@ -9,3 +9,4 @@ export { Icons, Charts, ReactMarkdown };
 export {default as AppHeader} from './AppHeader';
 export {default as DropDownMenu} from './DropDownMenu';
 export {default as AppNavBar} from './AppNavBar';
+export {default as CodeDialog} from './CodeDialog';

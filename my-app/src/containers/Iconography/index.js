@@ -1,10 +1,21 @@
-import React from 'react';
-import MainContent from "../MainContent"
+import React from "react";
+import { SvgIcon, Typography, Icons } from "../../components";
 
-function Iconography(props) {
-    return (
-        <MainContent content="Icongraphy section"/>
-    );
+function Iconography() {
+  let keys = Object.keys(Icons);
+  return (
+    <div className="icon-container">
+      <Typography variant="h6">Click an Icon to see sample usage</Typography>
+      {keys.map(label => {
+        let CurrIcon = Icons[label];
+        return (
+          <SvgIcon key={label}>
+            <CurrIcon />
+          </SvgIcon>
+        );
+      })}
+    </div>
+  );
 }
 
 export default Iconography;

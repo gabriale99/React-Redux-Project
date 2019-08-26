@@ -555,6 +555,25 @@ body .header {
 .notification {
   z-index: 999;
 }
+.spinner-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 100px 0;
+}
+.spinner-container .spinner {
+  margin: 10px 20px;
+}
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.progress-bar-container .progress-bar {
+  margin: 20px 0;
+  width: 100%;
+}
 .sidebar {
   width: 100vw;
   padding: 10px;
