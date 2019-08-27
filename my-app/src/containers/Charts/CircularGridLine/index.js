@@ -50,7 +50,7 @@ function CircularGridLine(props) {
     <ReactMarkdown
       source={codeSample}
       renderers={{ code: CodeBlock }}
-      className="sampleCode"
+      className="sample-code"
     />
   );
 

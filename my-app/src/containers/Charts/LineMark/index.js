@@ -44,7 +44,11 @@ function LineMark() {
     }`;
 
   let code = (
-    <ReactMarkdown source={codeSample} renderers={{ code: CodeBlock }} />
+    <ReactMarkdown
+      source={codeSample}
+      renderers={{ code: CodeBlock }}
+      className="sample-code"
+    />
   );
 
   function renderLineMarkSeries() {
@@ -62,10 +66,7 @@ function LineMark() {
           markStyle={{ stroke: "blue" }}
           data={data[0]}
         />
-        <LineMarkSeries
-          curve={"curveMonotoneX"}
-          data={data[1]}
-        />
+        <LineMarkSeries curve={"curveMonotoneX"} data={data[1]} />
       </XYPlot>
     );
   }

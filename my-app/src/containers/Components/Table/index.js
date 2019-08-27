@@ -118,40 +118,38 @@ function EnhancedTable(props) {
   return (
     <Paper>
       <EnhancedTableToolbar label="Nutrition" />
-      <div>
-        <Table aria-labelledby="tableTitle" size="medium">
-          <EnhancedTableHead
-            order={order}
-            orderBy={orderBy}
-            onRequestSort={handleRequestSort}
-            rowCount={data.length}
-          />
-          <TableBody>
-            {stableSort(data, getSorting(order, orderBy))
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row, index) => {
-                const labelId = `enhanced-table-checkbox-${index}`;
+      <Table aria-labelledby="tableTitle" size="medium">
+        <EnhancedTableHead
+          order={order}
+          orderBy={orderBy}
+          onRequestSort={handleRequestSort}
+          rowCount={data.length}
+        />
+        <TableBody>
+          {stableSort(data, getSorting(order, orderBy))
+            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+            .map((row, index) => {
+              const labelId = `enhanced-table-checkbox-${index}`;
 
-                return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.name}>
-                    <TableCell component="th" id={labelId} scope="row">
-                      {row.name}
-                    </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                  </TableRow>
-                );
-              })}
-            {emptyRows > 0 && (
-              <TableRow style={{ height: 49 * emptyRows }}>
-                <TableCell colSpan={6} />
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
+              return (
+                <TableRow hover role="checkbox" tabIndex={-1} key={row.name}>
+                  <TableCell component="th" id={labelId} scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.calories}</TableCell>
+                  <TableCell align="right">{row.fat}</TableCell>
+                  <TableCell align="right">{row.carbs}</TableCell>
+                  <TableCell align="right">{row.protein}</TableCell>
+                </TableRow>
+              );
+            })}
+          {emptyRows > 0 && (
+            <TableRow style={{ height: 49 * emptyRows }}>
+              <TableCell colSpan={6} />
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
       <TablePagination
         rowsPerPageOptions={[5, 10]}
         component="div"
@@ -217,16 +215,18 @@ function TableDemo(props) {
   function renderTable() {
     return (
       <div className="component-container">
-        <EnhancedTable
-          page={props.page}
-          changeTablePage={props.changeTablePage}
-          rowsPerPage={props.rowsPerPage}
-          setRowsPerPage={props.setRowsPerPage}
-          order={props.order}
-          setOrder={props.setOrder}
-          orderBy={props.orderBy}
-          setOrderBy={props.setOrderBy}
-        />
+        <div className="table-gallery">
+          <EnhancedTable
+            page={props.page}
+            changeTablePage={props.changeTablePage}
+            rowsPerPage={props.rowsPerPage}
+            setRowsPerPage={props.setRowsPerPage}
+            order={props.order}
+            setOrder={props.setOrder}
+            orderBy={props.orderBy}
+            setOrderBy={props.setOrderBy}
+          />
+        </div>
       </div>
     );
   }

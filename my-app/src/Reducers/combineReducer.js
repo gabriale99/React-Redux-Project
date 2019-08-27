@@ -4,6 +4,7 @@ import navBarReducer from "./navBarReducer.js";
 import contentReducer from "./contentReducer.js";
 import chartsReducer from "./chartsReducer.js";
 import componentsReducer from "./componentsReducer.js"
+import iconReducer from "./iconReducer"
 
 const combineReducer = combineReducers({
   menuReducer,
@@ -11,6 +12,7 @@ const combineReducer = combineReducers({
   contentReducer,
   chartsReducer,
   componentsReducer,
+  iconReducer,
 });
 
 export default combineReducer;

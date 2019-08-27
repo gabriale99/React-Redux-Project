@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { AppHeader, AppNavBar } from '../components/';
+import { AppHeader, AppNavBar, Footer } from '../components/';
 import Home from './Home'
 import Colors from './Colors'
 import Components from './Components'
@@ -43,6 +43,7 @@ function App(props) {
           }
 
           <Route path="/Iconography" component={Iconography} />
+          <Footer />
         </div>
       </Router>
     </React.Fragment>

@@ -18,10 +18,10 @@ class MainContent extends React.Component {
     const { label, content, code, tab } = this.props;
     return (
       <Paper className="main-container">
-        <AppBar position="static">
+        <AppBar className="tab-container">
           <Tabs
             value={tab}
-            className="tabContainer"
+            className="tabs"
             onChange={this.handleChange}
             aria-label="tab"
             variant="fullWidth"

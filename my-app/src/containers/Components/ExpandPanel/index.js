@@ -49,40 +49,42 @@ function ExpandPanelDemo() {
   function renderExpandPanel() {
     return (
       <div className="component-container">
-        <ExpansionPanel className="single-panel">
-          <ExpansionPanelSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            className="single-panel"
-          >
-            Expansion Panel 1
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-        <ExpansionPanel className="single-panel">
-          <ExpansionPanelSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            className="single-panel"
-          >
-            Expansion Panel 2
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-        <ExpansionPanel disabled className="single-panel">
-          <ExpansionPanelSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel3a-content"
-          >
-            Disabled Expansion Panel
-          </ExpansionPanelSummary>
-        </ExpansionPanel>
+        <div className="panel-gallery">
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+            >
+              Expansion Panel 1
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+            >
+              Expansion Panel 2
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel disabled>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+            >
+              Disabled Expansion Panel
+            </ExpansionPanelSummary>
+          </ExpansionPanel>
+        </div>
       </div>
     );
   }

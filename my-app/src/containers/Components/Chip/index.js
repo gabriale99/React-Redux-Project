@@ -41,11 +41,11 @@ function ChipDemo() {
 
   function renderChips() {
     return (
-      <div className="chip component-container">
-        <div className="chip-container">
+      <div className="component-container">
+        <div className="chip-gallery">
           <Chip
             variant="outlined"
-            color="secondary"
+            color="primary"
             label="basic chip"
             onDelete={handleDelete}
             avatar={<Avatar>FH</Avatar>}
@@ -77,6 +77,7 @@ function ChipDemo() {
             label="Clickable Deletable Chip"
             onClick={handleClick}
             onDelete={handleDelete}
+            color="secondary"
             className="chip"
           />
           <Chip
@@ -84,6 +85,7 @@ function ChipDemo() {
             label="Clickable Deletable Chip"
             onClick={handleClick}
             onDelete={handleDelete}
+            color="secondary"
             className="chip"
           />
           <Chip

@@ -1,33 +1,26 @@
-body .header
-    top 0
-    left auto
-    right 0
-    position fixed
-    width 100%
+.header
     z-index 1500
+    .toolBar
+        display flex
+        justify-content space-between
+        background-color #2fa1b5
+        & .headerButtonContainer
+            padding 8px
+            margin 2px
+            & .headerButton
+                color white
 
-.toolBar
-    display flex
-    justify-content space-between
-    background-color #2fa1b5
-    & .headerButtonContainer
-        padding 8px
-        margin 2px
-        & .headerButton
-            color white
+        .headerTitle
+            padding 0 10px
+            border-left 2px solid white
 
-.headerTitle
-    padding 0 10px
-    border-left 2px solid white
-
-.left, .right
-    display flex
-    align-items center
+        .left, .right
+            display flex
+            align-items center
 
 .navBarContainer
     position fixed
     top 0
-    z-index 600
     & .navBar
         margin-top 85px
         & .navBarItem
@@ -36,3 +29,15 @@ body .header
                 padding 0 12px 0 0
         & .navBarSubList
             padding: 0
+
+footer
+	border-top 1px solid color-blue-sparta
+	margin-top 30px
+	display flex
+	font-size 90%
+	height 50px
+	justify-content left
+	align-items center
+
+	p
+		color color-blue-ghost

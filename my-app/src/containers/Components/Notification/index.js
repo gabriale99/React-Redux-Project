@@ -67,28 +67,30 @@ function Notification(props) {
   function renderNotification() {
     return (
       <div className="component-container">
-        <Button onClick={handleClick} variant="outlined">
-          Check notification
-        </Button>
-        <Snackbar
-          className="notification"
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center"
-          }}
-          open={openNotification}
-          autoHideDuration={null}
-          onClose={handleClose}
-        >
-          <SnackbarContent
-            message={<span>WAAAAAAASSSSSSSSSSUUUUUUUUPPPPPP</span>}
-            action={[
-              <IconButton key="close" color="inherit" onClick={handleClose}>
-                <CloseIcon />
-              </IconButton>
-            ]}
-          />
-        </Snackbar>
+        <div className="notification-gallery">
+          <Button onClick={handleClick} variant="outlined">
+            Check notification
+          </Button>
+          <Snackbar
+            className="notification"
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "center"
+            }}
+            open={openNotification}
+            autoHideDuration={null}
+            onClose={handleClose}
+          >
+            <SnackbarContent
+              message={<span>WAAAAAAASSSSSSSSSSUUUUUUUUPPPPPP</span>}
+              action={[
+                <IconButton key="close" color="inherit" onClick={handleClose}>
+                  <CloseIcon />
+                </IconButton>
+              ]}
+            />
+          </Snackbar>
+        </div>
       </div>
     );
   }

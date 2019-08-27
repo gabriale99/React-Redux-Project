@@ -32,16 +32,18 @@ function AvatarDemo() {
     <ReactMarkdown
       source={codeSample}
       renderers={{ code: CodeBlock }}
-      className="sampleCode"
+      className="sample-code"
     />
   );
 
   const renderAvatars = function() {
     return (
       <div className="component-container">
-        {renderImageAvatars()}
-        {renderLetterAvatars()}
-        {renderIconAvatars()}
+        <div className="avatar-gallery">
+          {renderImageAvatars()}
+          {renderLetterAvatars()}
+          {renderIconAvatars()}
+        </div>
       </div>
     );
   };
@@ -49,11 +51,11 @@ function AvatarDemo() {
   const renderImageAvatars = function() {
     return (
       <div className="avatar-content">
-        <Typography variant="h5">Image</Typography>
+        <Typography variant="h5" className="avatar-label">
+          Image
+        </Typography>
         <div className="avatar-grid">
-          <Avatar
-            src="https://cdn.roundicons.com/wp-content/uploads/2017/08/snorlax-Filled-Outline-Icon.png"
-          />
+          <Avatar src="https://cdn.roundicons.com/wp-content/uploads/2017/08/snorlax-Filled-Outline-Icon.png" />
           <Avatar src="https://image.flaticon.com/icons/png/512/146/146018.png" />
           <Avatar
             src="https://img.icons8.com/ios-glyphs/2x/pokemon.png"
@@ -67,7 +69,9 @@ function AvatarDemo() {
   const renderLetterAvatars = function() {
     return (
       <div className="avatar-content">
-        <Typography variant="h5">Letter</Typography>
+        <Typography variant="h5" className="avatar-label">
+          Letter
+        </Typography>
         <div className="avatar-grid">
           <Avatar>B</Avatar>
           <Avatar className="letterS">S</Avatar>
@@ -80,7 +84,9 @@ function AvatarDemo() {
   const renderIconAvatars = function() {
     return (
       <div className="avatar-content">
-        <Typography variant="h5">Svg Icon</Typography>
+        <Typography variant="h5" className="avatar-label">
+          Svg Icon
+        </Typography>
         <div className="avatar-grid">
           <Avatar>
             <FolderIcon />

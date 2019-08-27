@@ -44,7 +44,7 @@ function ScatterPlot() {
         }`;
 
   let code = (
-    <ReactMarkdown source={codeSample} renderers={{ code: CodeBlock }} />
+    <ReactMarkdown source={codeSample} renderers={{ code: CodeBlock }} className="sample-code"/>
   );
 
   function renderScatterPlot() {

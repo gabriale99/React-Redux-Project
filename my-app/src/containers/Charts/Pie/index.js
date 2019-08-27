@@ -49,21 +49,27 @@ function Pie() {
         }`;
 
   let code = (
-    <ReactMarkdown source={codeSample} renderers={{ code: CodeBlock }} />
+    <ReactMarkdown
+      source={codeSample}
+      renderers={{ code: CodeBlock }}
+      className="sample-code"
+    />
   );
 
   function renderPieSeries() {
     return (
-      <RadialChart
-        width={300}
-        height={300}
-        data={data}
-        labelsRadiusMultiplier={0.8}
-        labelsStyle={{
-          fontSize: 12
-        }}
-        showLabels
-      />
+      <div className="charts-container">
+        <RadialChart
+          width={500}
+          height={500}
+          data={data}
+          labelsRadiusMultiplier={0.8}
+          labelsStyle={{
+            fontSize: 12
+          }}
+          showLabels
+        />
+      </div>
     );
   }
 

@@ -91,7 +91,7 @@ function NestedList(props) {
           subheader={
             <ListSubheader component="div">Nested List Items</ListSubheader>
           }
-          className="list-container"
+          className="list-gallery"
         >
           <ListItem button>
             <ListItemIcon>

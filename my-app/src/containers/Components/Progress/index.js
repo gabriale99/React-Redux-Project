@@ -47,11 +47,13 @@ function Progress() {
 
   function renderProgress() {
     return (
-      <div className="progress component-container">
-        <Typography variant="h5">Spinner</Typography>
-        {renderSpinner()}
-        <Typography variant="h5">Progress Bar</Typography>
-        {renderProgressBar()}
+      <div className="component-container">
+        <div className="progress-gallery">
+          <Typography variant="h5">Spinner</Typography>
+          {renderSpinner()}
+          <Typography variant="h5">Progress Bar</Typography>
+          {renderProgressBar()}
+        </div>
       </div>
     );
   }
@@ -61,6 +63,7 @@ function Progress() {
       <div className="spinner-container">
         <CircularProgress className="spinner" />
         <CircularProgress color="secondary" className="spinner" />
+        <CircularProgress size={60} className="spinner" />
       </div>
     );
   }

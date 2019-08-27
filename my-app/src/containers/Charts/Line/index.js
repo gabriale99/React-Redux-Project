@@ -1,8 +1,8 @@
 import React from "react";
 import MainContent from "../../MainContent";
 import { Charts, ReactMarkdown } from "../../../components";
-import data from './data'
-import {curveCatmullRom} from 'd3-shape';
+import data from "./data";
+import { curveCatmullRom } from "d3-shape";
 import CodeBlock from "../../CodeBlock";
 
 function Line() {
@@ -12,7 +12,7 @@ function Line() {
     YAxis,
     HorizontalGridLines,
     VerticalGridLines,
-    LineSeries,
+    LineSeries
   } = Charts;
 
   const codeSample = `
@@ -48,32 +48,32 @@ function Line() {
     }`;
 
   let code = (
-    <ReactMarkdown source={codeSample} renderers={{ code: CodeBlock }} />
+    <ReactMarkdown
+      source={codeSample}
+      renderers={{ code: CodeBlock }}
+      className="sample-code"
+    />
   );
 
   function renderLineSeries() {
-
     return (
-        <XYPlot width={500} height={500} className="line charts-container">
-          <HorizontalGridLines />
-          <VerticalGridLines />
-          <XAxis />
-          <YAxis />
-          <LineSeries
-            className="first-series"
-            data={data[0]}
-          />
-          <LineSeries
-            className="third-series"
-            curve={"curveMonotoneX"}
-            data={data[1]}
-          />
-          <LineSeries
-            className="fourth-series"
-            curve={curveCatmullRom.alpha(0.5)}
-            data={data[2]}
-          />
-        </XYPlot>
+      <XYPlot width={500} height={500} className="line charts-container">
+        <HorizontalGridLines />
+        <VerticalGridLines />
+        <XAxis />
+        <YAxis />
+        <LineSeries className="first-series" data={data[0]} />
+        <LineSeries
+          className="third-series"
+          curve={"curveMonotoneX"}
+          data={data[1]}
+        />
+        <LineSeries
+          className="fourth-series"
+          curve={curveCatmullRom.alpha(0.5)}
+          data={data[2]}
+        />
+      </XYPlot>
     );
   }
 

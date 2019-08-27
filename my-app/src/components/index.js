@@ -10,3 +10,4 @@ export {default as AppHeader} from './AppHeader';
 export {default as DropDownMenu} from './DropDownMenu';
 export {default as AppNavBar} from './AppNavBar';
 export {default as CodeDialog} from './CodeDialog';
+export {default as Footer} from './Footer';
