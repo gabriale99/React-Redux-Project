@@ -215,18 +215,16 @@ function TableDemo(props) {
   function renderTable() {
     return (
       <div className="component-container">
-        <div className="table-gallery">
-          <EnhancedTable
-            page={props.page}
-            changeTablePage={props.changeTablePage}
-            rowsPerPage={props.rowsPerPage}
-            setRowsPerPage={props.setRowsPerPage}
-            order={props.order}
-            setOrder={props.setOrder}
-            orderBy={props.orderBy}
-            setOrderBy={props.setOrderBy}
-          />
-        </div>
+        <EnhancedTable
+          page={props.page}
+          changeTablePage={props.changeTablePage}
+          rowsPerPage={props.rowsPerPage}
+          setRowsPerPage={props.setRowsPerPage}
+          order={props.order}
+          setOrder={props.setOrder}
+          orderBy={props.orderBy}
+          setOrderBy={props.setOrderBy}
+        />
       </div>
     );
   }

@@ -4,22 +4,40 @@
     height 85vh
     transition: margin-left 225ms
     justify-content: center
-    & .main-container
+    .main-container
         display flex
         flex-direction column
         align-items center
         max-width 1500px
-        & .tab-container
+        min-height 75vh
+        .paragraph
+            background-color #e0f7fa
+            margin 0 0 20px 0
+            padding 10px
+            width 100%
+            .divider
+                margin 10px 0
+            .logo
+                width 40px
+                height 40px
+                color white
+            .code
+                background-color #e8f5e9
+                padding 10px
+                margin 10px
+                width 50%
+        .tab-container
             position relative
+            z-index 1000
             & .tabs
                 background-color #0288d1
                 color white
-        & .sample-code
+        .sample-code
             background-color white
             width 100%
             min-height 75vh
             font-size: 1em
-    & .icon-container
+    .icon-container
         display flex
         flex-direction column
         .icon-gallery

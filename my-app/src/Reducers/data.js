@@ -38,7 +38,7 @@ const navBarContent = [
         icon: 'NavigateNext'
       },
       {
-        label: 'Expend Panel',
+        label: 'Expansion Panel',
         url: BASE_URL + 'Components/ExpandPanel',
         icon: 'NavigateNext'
       },
@@ -149,12 +149,20 @@ const navBarContent = [
 
 const menuContent = [
   {
-    label: "Profile",
+    label: "Contributor",
     url: "https://github.com/gabriale99"
   },
   {
-    label: "Stylus",
-    url: "http://stylus-lang.com/"
+    label: "React",
+    url: "https://reactjs.org/"
+  },
+  {
+    label: "Material-UI",
+    url: "https://material-ui.com/"
+  },
+  {
+    label: "React-vis",
+    url: "https://uber.github.io/react-vis/"
   }
 ]
 

@@ -61,29 +61,27 @@ function DialogDemo(props) {
   function renderDialog() {
     return (
       <div className="component-container">
-        <div className="dialog-gallery">
-          <Button variant="outlined" color="primary" onClick={handleClick}>
-            Open it
-          </Button>
-          <Dialog
-            onClose={handleClick}
-            aria-labelledby="simple-dialog-title"
-            open={openDialog}
-            fullWidth
-            maxWidth="md"
-          >
-            <DialogTitle>HEY YOU</DialogTitle>
-            <DialogContent>Have a nice day!</DialogContent>
-            <DialogActions>
-              <Button onClick={handleClick} color="primary">
-                Thank you
-              </Button>
-              <Button onClick={handleClick} color="primary">
-                I will try
-              </Button>
-            </DialogActions>
-          </Dialog>
-        </div>
+        <Button variant="outlined" color="primary" onClick={handleClick}>
+          Open it
+        </Button>
+        <Dialog
+          onClose={handleClick}
+          aria-labelledby="simple-dialog-title"
+          open={openDialog}
+          fullWidth
+          maxWidth="md"
+        >
+          <DialogTitle>HEY YOU</DialogTitle>
+          <DialogContent>Have a nice day!</DialogContent>
+          <DialogActions>
+            <Button onClick={handleClick} color="primary">
+              Thank you
+            </Button>
+            <Button onClick={handleClick} color="primary">
+              I will try
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
     );
   }

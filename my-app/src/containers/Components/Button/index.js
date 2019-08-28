@@ -33,12 +33,10 @@ function ButtonDemo() {
   const renderButtons = function() {
     return (
       <div className="component-container">
-        <div className="button-gallery">
-          {renderDefaultButtons()}
-          {renderContainedButtons()}
-          {rendertOutlinedButtons()}
-          {renderDifferetButtonSize()}
-        </div>
+        {renderDefaultButtons()}
+        {renderContainedButtons()}
+        {rendertOutlinedButtons()}
+        {renderDifferetButtonSize()}
       </div>
     );
   };
@@ -46,7 +44,9 @@ function ButtonDemo() {
   const renderDefaultButtons = function() {
     return (
       <div className="button-content">
-        <Typography variant="h5" className="button-label">Default</Typography>
+        <Typography variant="h5" className="button-label">
+          Default
+        </Typography>
         <div className="button-grid">
           <Button> Default </Button>
           <Button color="primary">Primary</Button>
@@ -69,7 +69,9 @@ function ButtonDemo() {
   const renderContainedButtons = function() {
     return (
       <div className="button-content">
-        <Typography variant="h5" className="button-label">Contained</Typography>
+        <Typography variant="h5" className="button-label">
+          Contained
+        </Typography>
         <div className="button-grid">
           <Button variant="contained"> Default </Button>
           <Button variant="contained" color="primary">
@@ -97,7 +99,9 @@ function ButtonDemo() {
   const rendertOutlinedButtons = function() {
     return (
       <div className="button-content">
-        <Typography variant="h5" className="button-label">Outlined</Typography>
+        <Typography variant="h5" className="button-label">
+          Outlined
+        </Typography>
         <div className="button-grid">
           <Button variant="outlined"> Default</Button>
           <Button variant="outlined" color="primary">
@@ -125,7 +129,9 @@ function ButtonDemo() {
   const renderDifferetButtonSize = function() {
     return (
       <div className="button-content">
-        <Typography variant="h5" className="button-label">Sizes</Typography>
+        <Typography variant="h5" className="button-label">
+          Sizes
+        </Typography>
         <div className="button-grid">
           <Button variant="contained" size="small">
             Small

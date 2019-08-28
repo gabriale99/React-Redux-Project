@@ -52,41 +52,32 @@ function InfoCard() {
   function renderInfoCard() {
     return (
       <div className="component-container">
-        <div className="card-gallery">
-          <div>
-            <Card className="card">
-              <CardActionArea>
-                <CardMedia
-                  image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
-                  title="Contemplative Reptile"
-                  className="card-media"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Lizard
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
-              </CardActions>
-            </Card>
-          </div>
-        </div>
+          <Card className="card">
+            <CardActionArea>
+              <CardMedia
+                image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
+                title="Contemplative Reptile"
+                className="card-media"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
       </div>
     );
   }

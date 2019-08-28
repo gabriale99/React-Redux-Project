@@ -39,11 +39,9 @@ function AvatarDemo() {
   const renderAvatars = function() {
     return (
       <div className="component-container">
-        <div className="avatar-gallery">
-          {renderImageAvatars()}
-          {renderLetterAvatars()}
-          {renderIconAvatars()}
-        </div>
+        {renderImageAvatars()}
+        {renderLetterAvatars()}
+        {renderIconAvatars()}
       </div>
     );
   };

@@ -137,9 +137,6 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
-.header {
-  z-index: 1500;
-}
 .header .toolBar {
   display: flex;
   justify-content: space-between;
@@ -444,22 +441,18 @@ footer p {
   align-items: center;
   width: 100%;
 }
-.component-container .avatar-gallery {
-  margin: 20px 0;
-  width: 100%;
-}
-.component-container .avatar-gallery .avatar-content {
+.component-container .avatar-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: inherit;
   color: #26a69a;
 }
-.component-container .avatar-gallery .avatar-content .avatar-label {
+.component-container .avatar-content .avatar-label {
   width: 80%;
   margin: 20px 0;
 }
-.component-container .avatar-gallery .avatar-content .avatar-grid {
+.component-container .avatar-content .avatar-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -467,30 +460,25 @@ footer p {
   background-color: #eee;
   border-radius: 5px;
   width: 80%;
-  margin: 20px 0;
   padding: 20px;
 }
-.component-container .avatar-gallery .avatar-content .avatar-grid .pikachu {
+.component-container .avatar-content .avatar-grid .pikachu {
   background-color: #ff0;
 }
-.component-container .avatar-gallery .avatar-content .avatar-grid .letterS {
+.component-container .avatar-content .avatar-grid .letterS {
   background-color: #ef5350;
 }
-.component-container .avatar-gallery .avatar-content .avatar-grid .letterLA {
+.component-container .avatar-content .avatar-grid .letterLA {
   background-color: #42a5f5;
 }
-.component-container .avatar-gallery .avatar-content .avatar-grid .pageview {
+.component-container .avatar-content .avatar-grid .pageview {
   background-color: #b9f6ca;
   color: #ff8a65;
 }
-.component-container .avatar-gallery .avatar-content .avatar-grid .assignment {
+.component-container .avatar-content .avatar-grid .assignment {
   background-color: #ba68c8;
 }
-.component-container .button-gallery {
-  margin: 30px 0;
-  width: 100%;
-}
-.component-container .button-gallery .button-content {
+.component-container .button-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -498,11 +486,11 @@ footer p {
   color: #26a69a;
   width: inherit;
 }
-.component-container .button-gallery .button-content .button-label {
+.component-container .button-content .button-label {
   width: 80%;
   margin: 10px 0;
 }
-.component-container .button-gallery .button-content .button-grid {
+.component-container .button-content .button-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -511,89 +499,53 @@ footer p {
   background-color: #eee;
   width: 80%;
   padding: 20px;
-  margin: 5px 0;
 }
-.component-container .chip-gallery {
+.component-container .chip-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  min-height: 70vh;
 }
-.component-container .chip-gallery .chip {
+.component-container .chip-content .chip {
   margin: 10px;
-}
-.component-container .dialog-gallery,
-.component-container .notification-gallery {
-  display: flex;
-  align-items: center;
-  min-height: 75vh;
 }
 .component-container .panel-gallery {
   display: flex;
   flex: auto;
   flex-direction: column;
   justify-content: center;
-  min-height: 75vh;
 }
-.component-container .card-gallery {
-  display: flex;
-  flex: auto;
-  justify-content: center;
-  align-items: center;
-  min-height: 75vh;
-}
-.component-container .card-gallery div .card {
+.component-container .card {
   max-width: 345px;
 }
-.component-container .card-gallery div .card .card-media {
+.component-container .card .card-media {
   height: 140px;
 }
 .list-gallery {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 360px;
-  min-height: 75vh;
+  min-width: 360px;
 }
 .list-gallery .nested {
   padding-left: 30px;
 }
-.progress-gallery {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 75vh;
-}
-.progress-gallery .spinner-container {
+.spinner-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 0 50px 0;
 }
-.progress-gallery .spinner-container .spinner {
+.spinner-container .spinner {
   margin: 10px 20px;
 }
-.progress-gallery .progress-bar-container {
+.progress-bar-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
-.progress-gallery .progress-bar-container .progress-bar {
+.progress-bar-container .progress-bar {
   margin: 20px 0;
   width: 100%;
-}
-.table-gallery {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 75vh;
 }
 .sidebar {
   width: 100vw;
@@ -607,9 +559,31 @@ footer p {
   flex-direction: column;
   align-items: center;
   max-width: 1500px;
+  min-height: 75vh;
+}
+.sidebar .main-container .paragraph {
+  background-color: #e0f7fa;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  width: 100%;
+}
+.sidebar .main-container .paragraph .divider {
+  margin: 10px 0;
+}
+.sidebar .main-container .paragraph .logo {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+}
+.sidebar .main-container .paragraph .code {
+  background-color: #e8f5e9;
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
 }
 .sidebar .main-container .tab-container {
   position: relative;
+  z-index: 1000;
 }
 .sidebar .main-container .tab-container .tabs {
   background-color: #0288d1;
